@@ -6,7 +6,7 @@ import Content from '../components/Content';
 const Body = (props) => {
   console.log(props);
   return (
-    <div className='response'>
+    <div className=''>
       <Content {...props} />
     </div>
   );

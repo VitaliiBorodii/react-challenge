@@ -18,3 +18,10 @@
 .form-button {
     flex: 2;
 }
+
+.response {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
