@@ -4,14 +4,14 @@
   "description": "UI for backend service",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline",
-    "start": "webpack",
+    "dev": "webpack --watch",
+    "start": "webpack && static ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack-dev-server": "^1.15.2"
+    "node-static": "^0.7.8"
   },
   "dependencies": {
     "babel-core": "^6.0.20",
@@ -26,7 +26,6 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.4.5",
-    "react-tap-event-plugin": "^0.2.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
     "style-loader": "^0.13.0",
