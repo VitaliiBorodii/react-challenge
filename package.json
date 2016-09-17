@@ -4,8 +4,8 @@
   "description": "UI for backend service",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "start": "webpack --watch",
+    "dev": "webpack-dev-server --inline",
+    "start": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -28,6 +28,7 @@
     "react-redux": "^4.4.5",
     "react-tap-event-plugin": "^0.2.1",
     "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.13.2"
   }

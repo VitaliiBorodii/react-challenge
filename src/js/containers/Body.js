@@ -4,7 +4,6 @@ import Content from '../components/Content';
 
 
 const Body = (props) => {
-  console.log(props);
   return (
     <div className=''>
       <Content {...props} />

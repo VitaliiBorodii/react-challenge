@@ -1,8 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import { requestResponse, receiveError, receiveResonse } from '../actions/api';
 
-const HOST = 'http://localhost:9990';
-
 export function getShortenUrl(url) {
   return (dispatch, getState) => {
     const state = getState();
@@ -10,14 +8,12 @@ export function getShortenUrl(url) {
       return;
     }
 
-    console.log({state: getState(), url});
+    const data = new FormData();
+    data.append( "url", url);
     dispatch(requestResponse());
-    fetch(HOST,{
+    fetch(`${HOST}/s`,{
       method: 'post',
-      headers: {
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-      },
-      body: `url=${url}`
+      body: data
     })
       .then(function(response) {
         if (response.status >= 400) {

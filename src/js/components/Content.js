@@ -25,7 +25,14 @@ const Content = ({ body, error }) => {
     <Card>
       <CardTitle style={headerStyle} title={title} />
       <CardText style={textStyle} color={color} >
-        {body || error}
+        {body ? (
+          <div>
+            {body.url} => <a href={body.shorten_url} target="_blank" className="response-text">
+              {body.shorten_url}
+            </a>
+          </div>
+          ) :
+          error}
       </CardText>
     </Card>
   )
