@@ -2,9 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import Store from './js/store';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-
 import './styles/main.css';
+
 import Application from './js/App';
 const App = () => (
   <Application />

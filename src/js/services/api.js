@@ -4,13 +4,16 @@ import { requestResponse, receiveError, receiveResonse } from '../actions/api';
 export function getShortenUrl(url) {
   return (dispatch, getState) => {
     const state = getState();
+
     if (state.api.pending) {
       return;
     }
 
     const data = new FormData();
     data.append( "url", url);
+
     dispatch(requestResponse());
+
     fetch(`${HOST}/s`,{
       method: 'post',
       body: data
@@ -18,7 +21,6 @@ export function getShortenUrl(url) {
       .then(function(response) {
         if (response.status >= 400) {
           response.text().then(err => dispatch(receiveError(err)));
-          throw new Error("Bad response from server");
         }
         return response.json();
       })

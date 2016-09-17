@@ -1,5 +1,5 @@
-import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/lib/card';
+import React, { PropTypes } from 'react';
+import {Card, CardTitle, CardText} from 'material-ui/lib/card';
 
 const headerStyle = {
   fontWeight: 'bold',
@@ -37,6 +37,11 @@ const Content = ({ body, error }) => {
     </Card>
   )
 };
+
+Content.propTypes = {
+  body: PropTypes.object,
+  error: PropTypes.string,
+}
 
 export default Content;
 

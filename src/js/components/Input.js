@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import TextField from 'material-ui/lib/text-field';
 
 const style = {
