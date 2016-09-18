@@ -1,15 +1,15 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const buildDir = './dist';
-const webpack = require('webpack');
-let HOST;
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var buildDir = './dist';
+var webpack = require('webpack');
+var HOST;
 try {
-    const config = require('./configs/config.json');
+    var config = require('./configs/config.json');
     HOST = config.TUBITY_API_HOST;
 } catch (e) {
     console.error('Please specify `TUBITY_API_HOST` variable in `configs/config.json` file');
     HOST = 'http://127.0.0.1:9990';
 }
-const plugins = [
+var plugins = [
     new ExtractTextPlugin('bundle.css', {
     allChunks: true
     }),

@@ -1,6 +1,6 @@
 ## How to run
 
-You need to have a Node.js(>=4.0) installed on your comuter
+You need to have a Node.js(>=0.12.7) installed on your comuter
 
 `npm install` - to install dependencies
 
