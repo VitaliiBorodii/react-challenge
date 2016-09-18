@@ -9,7 +9,6 @@ try {
     console.error('Please specify `TUBITY_API_HOST` variable in `configs/config.json` file');
     HOST = 'http://127.0.0.1:9990';
 }
-console.log(HOST)
 const plugins = [
     new ExtractTextPlugin('bundle.css', {
     allChunks: true
