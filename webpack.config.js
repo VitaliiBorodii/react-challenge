@@ -1,7 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const buildDir = './dist';
 const webpack = require('webpack');
-const HOST = 'http://192.168.99.100:9990';
+const HOST = process.env.TUBITY_API_HOST || 'http://127.0.0.1:9990';
 const plugins = [
     new ExtractTextPlugin('bundle.css', {
     allChunks: true

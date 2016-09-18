@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch",
+    "server": "static ./",
     "start": "webpack && static ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
