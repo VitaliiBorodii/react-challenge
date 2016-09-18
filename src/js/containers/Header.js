@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Input from '../components/Input';
 import Button from '../components/Button';
-import { getShortenUrl } from '../services/api';
+import { getShortenUrl } from '../services/tubity';
 
 class Header extends Component {
 

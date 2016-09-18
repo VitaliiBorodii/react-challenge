@@ -21,4 +21,3 @@ export function receiveError(error) {
     type: RECEIVE_ERROR
   };
 }
-

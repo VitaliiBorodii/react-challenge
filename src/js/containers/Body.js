@@ -12,7 +12,7 @@ const Body = (props) => {
 };
 
 function mapStateToProps(state) {
-  return {...state.api};
+  return {...state.tubity};
 }
 
 export default connect(mapStateToProps)(Body);

@@ -1,8 +1,8 @@
-import { REQUEST_RESPONSE, RECEIVE_RESPONSE, RECEIVE_ERROR } from '../actions/api';
+import { REQUEST_RESPONSE, RECEIVE_RESPONSE, RECEIVE_ERROR } from '../actions/tubity';
 
 const initState = {
   pending: false,
-  body: '',
+  body: null,
   error: ''
 };
 

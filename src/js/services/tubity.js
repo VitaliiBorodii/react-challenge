@@ -1,11 +1,11 @@
 import fetch from 'isomorphic-fetch';
-import { requestResponse, receiveError, receiveResonse } from '../actions/api';
+import { requestResponse, receiveError, receiveResonse } from '../actions/tubity';
 
 export function getShortenUrl(url) {
   return (dispatch, getState) => {
     const state = getState();
 
-    if (state.api.pending) {
+    if (state.tubity.pending) {
       return;
     }
 
@@ -20,7 +20,7 @@ export function getShortenUrl(url) {
     })
       .then(function(response) {
         if (response.status >= 400) {
-          response.text().then(err => dispatch(receiveError(err)));
+          return response.text().then(err => dispatch(receiveError(err.toString())));
         }
         return response.json();
       })
